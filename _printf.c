@@ -33,11 +33,15 @@ int _printf(const char *format, ...)
 				switch (format[j])
 				{
 						case 'c':
-						i += _putchar(va_arg(lista, int));
-						break;
+							i += _putchar(va_arg(lista, int));
+							break;
+						case 's':
+							i += _print_s(va_arg(lista, char *));
+							break;
 				}
 			pos = 0;	
 			}
+		va_end(lista);
 	}
 
 				return (i);
