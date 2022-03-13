@@ -20,11 +20,27 @@ int _print_s(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0') 
+	while (str[i] != '\0')
 	{
 		i++;
 		_putchar(str[i - 1]);
 	}
 
 return (i);
+}
+/**
+* _numbers - print numbers
+* @n: integer
+* Return : numbers
+*/
+int _numbers(int n)
+{
+	int p = 0;
+
+
+	if ( n < 0 )
+	{
+		n += _putchar('-');
+		n = -n;
+	}
 }

@@ -2,32 +2,25 @@
 /**
 * _printf - functions
 * @format: format
+* Return: 0
 */
 int _printf(const char *format, ...)
 {
 	va_list lista;
-	int pos = 0;
-	int i = 0;
-	int par = 0;
-	int j;
+	int pos = 0, int i = 0, int par = 0, int j;
 
 	if (format)
 	{
 		va_start(lista, format);
-
 		for (j = 0; format[j] != '\0'; j++)
-			
+
 			if (!pos)
-			{	
+			{
 				if (format[j] != '%')
-				{	
 					i += _putchar(format[j]);
-				}
 				else
-				{
 					pos = 1;
-				}
-			}		
+			}
 			else
 			{
 				switch (format[j])
@@ -41,11 +34,16 @@ int _printf(const char *format, ...)
 						case '%':
 							i += _putchar('%');
 							break;
+						case 'd':
+							i += _numbers(va_arg(lista, int));
+							break;
+						case 'i':
+							i += _numbers(va_arg(lista, int));
+							break;
 				}
-			pos = 0;	
+			pos = 0;
 			}
 		va_end(lista);
 	}
-
-				return (i);
+	return (i);
 }
