@@ -38,6 +38,9 @@ int _printf(const char *format, ...)
 						case 's':
 							i += _print_s(va_arg(lista, char *));
 							break;
+						case '%':
+							i += _putchar('%');
+							break;
 				}
 			pos = 0;	
 			}

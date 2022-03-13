@@ -20,14 +20,10 @@ int _print_s(char *str)
 {
 	int i = 0;
 
-	if (str == NULL)
-		str = ("null");
-	if (str)
+	while (str[i] != '\0') 
 	{
-		for (; str[i] != '\0'; i++)
-		{
-		putchar(str[i]);
-		}
+		i++;
+		_putchar(str[i - 1]);
 	}
 
 return (i);
