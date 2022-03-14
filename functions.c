@@ -37,10 +37,22 @@ int _numbers(int n)
 {
 	int p = 0;
 
-
-	if ( n < 0 )
+	if (n)
 	{
-		n += _putchar('-');
-		n = -n;
+		if ( n < 0 )
+		{
+			p += _putchar('-');
+			n = -n;
+		}
+		if ((n / 10) > 0)
+		{	
+			p += _numbers(n / 10);
+		}
+		p += _putchar((n % 10) + '0');
+		
 	}
+	else
+		p +=_putchar(n + '0');
+
+	return (p);
 }
