@@ -8,5 +8,5 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _print_s(char *str);
-int _numbers(int n);
+int _numbers(long int n);
 #endif

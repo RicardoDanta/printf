@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+
 				switch (format[j])
 				{
 						case 'c':

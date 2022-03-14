@@ -20,45 +20,39 @@ int _print_s(char *str)
 {
 	int i = 0;
 
-	if (str == NULL)
+	while (str[i] != '\0')
 	{
-		str = "(null)";
+		i++;
+		_putchar(str[i - 1]);
 	}
 
-	if (str)
-	{
-		while (str[i] != '\0')
-		{
-			i++;
-			_putchar(str[i - 1]);
-		}
-	}
-	return (i);
+return (i);
 }
 /**
 * _numbers - print numbers
 * @n: integer
-* Return: p
+* Return : numbers
 */
-int _numbers(int n)
+int _numbers(long int n)
 {
 	int p = 0;
+	long int e = n;
 
 	if (n)
 	{
-		if (n < 0)
+		if (e < 0)
 		{
 			p += _putchar('-');
-			n = -n;
+			e = -e;
 		}
-		if ((n / 10) > 0)
-		{
-			p += _numbers(n / 10);
+		if ((e / 10) > 0)
+		{	
+			p += _numbers(e / 10);
 		}
-		p += _putchar((n % 10) + '0');
+		p += _putchar((e % 10) + '0');
+		
 	}
 	else
-		p += _putchar(n + '0');
-
+		p +=_putchar(n + '0');
 	return (p);
 }
