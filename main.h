@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
-#define BUFFER_SIZE 1024
 
 int _putchar(char c);
 int _printf(const char *format, ...);
