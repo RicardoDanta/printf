@@ -1,5 +1,5 @@
 #include "main.h"
-#define BUFFER SIZE 1024
+#define BUFFER 1024
 /**
 * _printf - functions
 * @format: format
