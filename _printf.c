@@ -12,8 +12,12 @@ int _printf(const char *format, ...)
 	if (format)
 	{
 		va_start(lista, format);
-		if (format == NULL || (format[0] == '%' && format[1] == '\0')
+
+		if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 				return (-1);
+		if (lista == NULL)
+			return (-1);
+		
 		for (j = 0; format[j] != '\0'; j++)
 
 			if (!pos)
