@@ -50,5 +50,9 @@ int _printf(const char *format, ...)
 			}
 		va_end(lista);
 	}
+	else 
+	{
+		return (-1);
+	}
 	return (i);
 }
