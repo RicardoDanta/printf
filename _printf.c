@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 				return (-1);
 		if (lista == NULL)
 			return (-1);
-		
+
 		for (j = 0; format[j] != '\0'; j++)
 
 			if (!pos)
