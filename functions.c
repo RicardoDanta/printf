@@ -31,7 +31,7 @@ return (i);
 /**
 * _numbers - print numbers
 * @n: integer
-* Return : numbers
+* Return: ps
 */
 int _numbers(int n)
 {
@@ -39,20 +39,20 @@ int _numbers(int n)
 
 	if (n)
 	{
-		if ( n < 0 )
+		if (n < 0)
 		{
 			p += _putchar('-');
 			n = -n;
 		}
 		if ((n / 10) > 0)
-		{	
+		{
 			p += _numbers(n / 10);
 		}
 		p += _putchar((n % 10) + '0');
-		
+
 	}
 	else
-		p +=_putchar(n + '0');
+		p += _putchar(n + '0');
 
 	return (p);
 }
