@@ -24,6 +24,7 @@ int _print_s(char *str)
 	{
 		str = "(null)";
 	}
+
 	if (str)
 	{
 		while (str[i] != '\0')
@@ -32,13 +33,12 @@ int _print_s(char *str)
 			_putchar(str[i - 1]);
 		}
 	}
-
-return (i);
+	return (i);
 }
 /**
 * _numbers - print numbers
 * @n: integer
-* Return: ps
+* Return: p
 */
 int _numbers(int n)
 {
@@ -56,7 +56,6 @@ int _numbers(int n)
 			p += _numbers(n / 10);
 		}
 		p += _putchar((n % 10) + '0');
-
 	}
 	else
 		p += _putchar(n + '0');

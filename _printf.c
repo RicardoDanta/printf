@@ -19,7 +19,9 @@ int _printf(const char *format, ...)
 				if (format[j] != '%')
 					i += _putchar(format[j]);
 				else
+				{
 					pos = 1;
+				}
 			}
 			else
 			{
@@ -40,6 +42,9 @@ int _printf(const char *format, ...)
 						case 'i':
 							i += _numbers(va_arg(lista, int));
 							break;
+						default:
+							i += _putchar('%');
+							i += _putchar(format[j]);
 				}
 			pos = 0;
 			}
