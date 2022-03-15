@@ -49,13 +49,13 @@ int _numbers(long int n)
 			e = -e;
 		}
 		if ((e / 10) > 0)
-		{	
+		{
 			p += _numbers(e / 10);
 		}
 		p += _putchar((e % 10) + '0');
-		
+
 	}
 	else
-		p +=_putchar(n + '0');
+		p += _putchar(n + '0');
 	return (p);
 }
