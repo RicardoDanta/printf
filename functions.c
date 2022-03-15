@@ -19,6 +19,7 @@ int _putchar(char c)
 int _print_s(char *str)
 {
 	int i = 0;
+
 	if (str == NULL)
 		str = "(null)";
 	if (str)
@@ -40,6 +41,7 @@ int _numbers(long int n)
 {
 	int p = 0;
 	long int e = n;
+
 	if (n)
 	{
 		if (e < 0)
@@ -63,37 +65,20 @@ int _numbers(long int n)
 * Return: numbers
 */
 int _unsigned(unsigned int n)
- {
-         int p = 0;
-         unsigned int e = n;
-		if (n)
-       {
-                  if ((e / 10) > 0)
-                  {
-                        p += _numbers(e / 10);
-                  }
-                 p += _putchar((e % 10) + '0');
+{
+	int p = 0;
+	unsigned int e = n;
 
-          }
+	if (n)
+	{
+		if ((e / 10) > 0)
+		{
+			p += _numbers(e / 10);
+		}
+		p += _putchar((e % 10) + '0');
+	}
 		else
 			p += _putchar(n + '0');
-		return (p);
+	return (p);
 }
-/**
-* _binary - print binary numbers
-* @b: number
-* Return: binary
-*/
-int _binary(int b)
-{
-	int u = 1, c = 0, cam;
 
-	while (b != 0)
-	{
-		cam = b % 2;
-		b /= 2;
-		c += cam * u;
-		u *= 10; (u = u * 10);
-	}
-	return (c);
-}
