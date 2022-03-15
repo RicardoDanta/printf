@@ -60,7 +60,7 @@ int _numbers(long int n)
 	return (p);
 }
 /**
-* _numbers - print numbers
+* _unsigned - print numbers
 * @n: integer
 * Return: numbers
 */
