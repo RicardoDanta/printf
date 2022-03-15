@@ -30,13 +30,12 @@ int _print_s(char *str)
 		_putchar(str[i - 1]);
 		}
 	}
-
-return (i);
+	return (i);
 }
 /**
 * _numbers - print numbers
 * @n: integer
-* Return : numbers
+* Return: numbers
 */
 int _numbers(long int n)
 {
