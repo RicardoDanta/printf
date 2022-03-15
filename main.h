@@ -10,4 +10,6 @@ int _printf(const char *format, ...);
 int _print_s(char *str);
 int _numbers(long int n);
 int _unsigned(unsigned int n);
+int _print_hexa(unsigned long d);
+int print_po(unsigned long a);
 #endif

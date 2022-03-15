@@ -53,6 +53,15 @@ int _printf(const char *format, ...)
 						case 'u':
 							i += _unsigned(va_arg(lista, int));
 							break;
+						case 'x':
+							i += _print_hexa(va_arg(lista, int));
+							break;
+						case 'X':
+							i += _print_hexa(va_arg(lista, int));
+							break;
+						case 'p':
+							i += print_po(va_arg(lista, int));
+							break;
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);
