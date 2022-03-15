@@ -53,9 +53,6 @@ int _printf(const char *format, ...)
 						case 'u':
 							i += _unsigned(va_arg(lista, int));
 							break;
-						case 'b':
-							i += _binary(va_arg(lista, int));
-							break;
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);

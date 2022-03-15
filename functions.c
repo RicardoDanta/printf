@@ -82,22 +82,4 @@ int _unsigned(unsigned int n)
 		p += _putchar(n + '0');
 		return (p);
 }
-/**
-* _binary - print binary numbers
-* @b: number
-* Return: binary
-*/
-int _binary(int b)
-{
-	int n;
 
-	while (n)
-	{
-		if (n & 1)
-			_printf("1");
-		else
-			_printf("0");
-			n >>= 1;
-}
-	return (b);
-}
