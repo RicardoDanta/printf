@@ -20,8 +20,8 @@ int _print_s(char *str)
 {
 	int i = 0;
 
-	if str == NULL
-		str = "(null)"
+	if (str == NULL)
+		str = "(null)";
 
 	while (str[i] != '\0')
 	{
