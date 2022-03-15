@@ -9,4 +9,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int _print_s(char *str);
 int _numbers(long int n);
+int _unsigned(unsigned int n);
+int _binary(int b);
 #endif
