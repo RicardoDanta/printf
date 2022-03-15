@@ -89,14 +89,14 @@ int _unsigned(unsigned int n)
 */
 int _binary(int b)
 {
-	int u = 1, c = 0, cam;
-
-	while (b != 0)
-	{
-		cam = b % 2;
-		b /= 2;
-		c += cam * u;
-		u *= 10; (u = u * 10);
-	}
-	return (c);
+	int n;
+	while (n)
+	{ 
+		if (n & 1) 
+			_printf("1");
+		else 
+			_printf("0");
+		n >>= 1; 
+} 
+	return (b);
 }
