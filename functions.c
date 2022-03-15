@@ -61,25 +61,25 @@ int _numbers(long int n)
 	return (p);
 }
 /**
-* _numbers - print numbers
+* _unsigned - print numbers
 * @n: integer
 * Return: numbers
 */
 int _unsigned(unsigned int n)
- {
-         int p = 0;
-         unsigned int e = n;
-		if (n)
-       {
-                  if ((e / 10) > 0)
-                  {
-                        p += _numbers(e / 10);
-                  }
-                 p += _putchar((e % 10) + '0');
- 
-          }
-		else
-			p += _putchar(n + '0');
+{
+	int p = 0;
+	unsigned int e = n;
+
+	if (n)
+	{
+		if ((e / 10) > 0)
+		{
+			p += _numbers(e / 10);
+		}
+		p += _putchar((e % 10) + '0');
+	}
+	else
+		p += _putchar(n + '0');
 		return (p);
 }
 /**
@@ -90,13 +90,14 @@ int _unsigned(unsigned int n)
 int _binary(int b)
 {
 	int n;
+
 	while (n)
-	{ 
-		if (n & 1) 
+	{
+		if (n & 1)
 			_printf("1");
-		else 
+		else
 			_printf("0");
-		n >>= 1; 
-} 
+			n >>= 1;
+}
 	return (b);
 }
