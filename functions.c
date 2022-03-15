@@ -22,11 +22,13 @@ int _print_s(char *str)
 
 	if (str == NULL)
 		str = "(null)";
-
-	while (str[i] != '\0')
+	if (str)
 	{
+		while (str[i] != '\0')
+		{
 		i++;
 		_putchar(str[i - 1]);
+		}
 	}
 
 return (i);
