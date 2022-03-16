@@ -6,7 +6,7 @@
 * @c: This variable set the case of the output (0 =LowerCase and 1 =UpperCase).
 * Return: Con
 **/
-int _print_hexa_e(unsigned long d)
+int _print_hexa_e(unsigned long int d)
 {
         int r = 0, con = 0, rest;
         char h[100];
