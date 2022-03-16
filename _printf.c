@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		va_start(lista, format);
 
 		if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-				return (-1);
+			return (-1);
 		if (lista == NULL)
 			return (-1);
 
@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 							i += _numbers(va_arg(lista, int));
 							break;
 						case 'u':
-							i += _unsigned(va_arg(lista, int));
+							i += _unsigned(va_arg(lista, unsigned int));
 							break;
 						case 'x':
 							i += _print_hexa_e(va_arg(lista, int));
