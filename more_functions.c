@@ -16,6 +16,7 @@ int _print_octal(unsigned int number)
 		_putchar('0');
 		return (1);
 	}
+
 	while (r > 0)
 	{
 		a++;
@@ -34,12 +35,46 @@ int _print_octal(unsigned int number)
 		number /= 8;
 		n++;
 	}
+
 	while (n != 0)
-	{
+		{
 		n--;
 		_putchar(str[n]);
 		conta++;
 	}
 	free(str);
+	return (conta);
+}
+
+/**
+*print_rot13 - print string in rot13
+*@n: cambiar rot 13
+*Return: 0 if success.
+*/
+int _rot13(long int n)
+{
+	int g, a, conta = 0;
+	char *str = 0;
+	char norma[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+	char rot[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
+
+	for (g = 0; str[g] ; g++)
+	{
+		n = 0;
+		for (a = 0; norma[a] && !n; a++)
+		{
+			if (str[g] == rot[a])
+			{
+				_putchar(rot[a]);
+				conta++;
+				n = 1;
+			}
+		}
+		if (!n)
+		{
+			_putchar(str[g]);
+			conta++;
+		}
+	}
 	return (conta);
 }

@@ -70,6 +70,9 @@ int _printf(const char *format, ...)
 							i += print_rev(va_arg(lista, int));
 							break;
 							*/
+						case 'R':
+							i += _rot13(va_arg(lista, long int));
+							break;
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);
