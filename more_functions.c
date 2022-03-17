@@ -1,35 +1,33 @@
+#include "main.h"
 /**
 * print_octal - prints decimal numbers into octal base.
-* @args: arguments to print.
-* Return: Amount of characters printed.
+* @number: number to print.
+* Return: conta octal.
 */
-int print_octal(va_list args)
+int _print_octal(unsigned int number)
 {
 	char *str;
-	int n = 0;
-	int i = 0;
-	unsigned int aux = 0;
-	unsigned int number = 0;
-	unsigned int count = 0;
+	unsigned int n = 0, r = 0, a = 0, conta = 0;
 
-	number = va_arg(args, unsigned int);
-	i = number;
+	r = number;
 
 	if (number == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	while (i > 0)
+	while (r > 0)
 	{
-		aux++;
-		i /= 8;
+		a++;
+		r /= 8;
 	}
-	str = malloc(aux * sizeof(char) + 1);
+	str = malloc(a * sizeof(char) + 1);
+
 	if (str == NULL)
 	{
 		return (-1);
 	}
+
 	while (number > 0)
 	{
 		str[n] = (number % 8) + '0';
@@ -40,8 +38,8 @@ int print_octal(va_list args)
 	{
 		n--;
 		_putchar(str[n]);
-		count++;
+		conta++;
 	}
 	free(str);
-	return (count);
-}i
+	return (conta);
+}

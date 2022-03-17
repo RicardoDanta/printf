@@ -63,6 +63,13 @@ int _printf(const char *format, ...)
 							i += print_rev(va_arg(lista, int));
 							break;
 							*/
+						case 'o':
+							i += _print_octal(va_arg(lista, int));
+							break;
+						/**case 'r':
+							i += print_rev(va_arg(lista, int));
+							break;
+							*/
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);

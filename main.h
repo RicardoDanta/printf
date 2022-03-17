@@ -12,4 +12,5 @@ int _numbers(long int n);
 int _unsigned(unsigned int n);
 int print_binary(unsigned arg);
 int print_rev(int cad);
+int _print_octal(unsigned int number);
 #endif
