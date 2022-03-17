@@ -1,80 +1,47 @@
-#include "main.h"
-
 /**
-* _print_hexa_e - number in Hexa.
-* @d: Number print in Hexa.
-* Return: Con
-**/
-int _print_hexa_e(unsigned long int d)
+* print_octal - prints decimal numbers into octal base.
+* @args: arguments to print.
+* Return: Amount of characters printed.
+*/
+int print_octal(va_list args)
 {
-	int r = 0, con = 0, rest;
-	char h[100];
+	char *str;
+	int n = 0;
+	int i = 0;
+	unsigned int aux = 0;
+	unsigned int number = 0;
+	unsigned int count = 0;
 
-	if (d == 0)
+	number = va_arg(args, unsigned int);
+	i = number;
+
+	if (number == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	while (d / 16)
+	while (i > 0)
 	{
-		rest = d % 16;
-		if (rest < 10)
-			rest = rest + 48;
-		else
-			rest = rest + 87;
-		h[r] = rest;
-		r++;
-		d = d / 16;
+		aux++;
+		i /= 8;
 	}
-	for (r = r - 1; r >= 0; r--)
+	str = malloc(aux * sizeof(char) + 1);
+	if (str == NULL)
 	{
-		_putchar(h[r]);
-		con++;
+		return (-1);
 	}
-	return (con);
-}
-
-/**
-* print_po - print address
-* @a: list
-* Return: count
-**/
-
-int print_po(unsigned long a)
-{
-	unsigned long n = a;
-	int cont = 0;
-
-	if (n == 0)
+	while (number > 0)
 	{
-		return (_printf("(nil)"));
+		str[n] = (number % 8) + '0';
+		number /= 8;
+		n++;
 	}
-	cont += _putchar('0');
-	cont += _putchar('x');
-
-	cont += _print_hexa_e(n);
-	return (cont);
-}
-/**
-*_print_h - prints mem address
-*@p: list
-*Return: Char quantity.
-**/
-
-int _print_h(unsigned long p)
-{
-	unsigned long n = p;
-	int cont = 0;
-
-	if (n == 0)
+	while (n != 0)
 	{
-	return (_printf("(nil)"));
+		n--;
+		_putchar(str[n]);
+		count++;
 	}
-	cont += _putchar('0');
-	cont += _putchar('x');
-	cont += _print_hexa_e(n);
-	return (cont);
-
-
-
-}
+	free(str);
+	return (count);
+}i

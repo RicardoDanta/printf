@@ -11,7 +11,5 @@ int _print_s(char *str);
 int _numbers(long int n);
 int _unsigned(unsigned int n);
 int print_binary(unsigned arg);
-int _print_hexa_e(unsigned long int d);
-int print_po(unsigned long a);
-int _print_h(unsigned long p);
+int print_rev(int cad);
 #endif

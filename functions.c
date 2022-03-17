@@ -87,12 +87,11 @@ int _unsigned(unsigned int n)
 * @arg: arguments to print.
 * Return: number of prirnts
 */
-int print_binary(unsigned arg)
+int print_binary(unsigned num)
 {
 	char *str;
-	unsigned int i, auxi = 0, num, cont;
+	unsigned int i, auxi = 0, cont;
 
-	num = arg;
 	i = num;
 
 	if (num == 0)
