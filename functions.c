@@ -82,3 +82,45 @@ int _unsigned(unsigned int n)
 	return (p);
 }
 
+/**
+* print_binary - print numbers to binary
+* @arg: arguments to print.
+* Return: number of prirnts
+*/
+int print_binary(unsigned arg)
+{
+	char *str;
+	unsigned int i, auxi = 0, num, cont;
+
+	num = arg;
+	i = num;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	while (i > 0)
+	{
+		i /= 2;
+		auxi++;
+	}
+	cont = auxi;
+	str = malloc(auxi * sizeof(char) + 1);
+	if (str == NULL)
+		return (-1);
+	auxi = 0;
+	while (num > 0)
+	{
+		str[auxi] = (num % 2) + '0';
+		num /= 2;
+		auxi++;
+	}
+	while (auxi != 0)
+	{
+		auxi--;
+		_putchar(str[auxi]);
+	}
+	free(str);
+	return (cont);
+}
