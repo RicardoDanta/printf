@@ -45,13 +45,13 @@ int _print_octal(unsigned int number)
 	free(str);
 	return (conta);
 }
-
 /**
+
 *print_rot13 - print string in rot13
 *@n: cambiar rot 13
 *Return: 0 if success.
-*/
-int _rot13(long int n)
+
+int _rot13(int n)
 {
 	int g, a, conta = 0;
 	char *str = 0;
@@ -78,3 +78,27 @@ int _rot13(long int n)
 	}
 	return (conta);
 }
+*/
+/**
+* print_rev - print a string reverse
+* @cad: string.
+* Return: 0 if success.
+
+int print_rev(int cad)
+{
+
+	int conta = 0;
+	char *str;
+
+	while (str[conta + 1])
+	{
+		cad++;
+	}
+
+	for (conta = cad - 1; conta >= 0; conta--)
+	{
+		_putchar(str[conta]);
+	}
+	return (cad);
+}
+*/

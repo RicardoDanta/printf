@@ -57,10 +57,10 @@ int _printf(const char *format, ...)
 							i += print_binary(va_arg(lista, int));
 							break;
 						/**case 'x':
-							i += print_rev(va_arg(lista, int));
+							i += (va_arg(lista, int));
 							break;
 						case 'X':
-							i += print_rev(va_arg(lista, int));
+							i += (va_arg(lista, int));
 							break;
 							*/
 						case 'o':
@@ -69,10 +69,10 @@ int _printf(const char *format, ...)
 						/**case 'r':
 							i += print_rev(va_arg(lista, int));
 							break;
-							*/
 						case 'R':
-							i += _rot13(va_arg(lista, long int));
+							i += _rot13(va_arg(lista, int));
 							break;
+							*/
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);

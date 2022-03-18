@@ -13,5 +13,5 @@ int _unsigned(unsigned int n);
 int print_binary(unsigned arg);
 int print_rev(int cad);
 int _print_octal(unsigned int number);
-int _rot13(long int n);
+int _rot13(int n);
 #endif
