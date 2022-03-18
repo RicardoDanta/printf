@@ -68,11 +68,10 @@ int _printf(const char *format, ...)
 							break;
 						/**case 'r':
 							i += print_rev(va_arg(lista, int));
-							break;
+							break; */
 						case 'R':
-							i += _rot13(va_arg(lista, int));
+							i += _rot13(va_arg(lista, char *));
 							break;
-							*/
 						default:
 							i += _putchar('%');
 							i += _putchar(format[j]);

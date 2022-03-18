@@ -46,15 +46,14 @@ int _print_octal(unsigned int number)
 	return (conta);
 }
 /**
-
 *print_rot13 - print string in rot13
 *@n: cambiar rot 13
 *Return: 0 if success.
-
-int _rot13(int n)
+*/
+int _rot13(char *str)
 {
 	int g, a, conta = 0;
-	char *str = 0;
+	int n;
 	char norma[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char rot[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
@@ -78,7 +77,7 @@ int _rot13(int n)
 	}
 	return (conta);
 }
-*/
+
 /**
 * print_rev - print a string reverse
 * @cad: string.
