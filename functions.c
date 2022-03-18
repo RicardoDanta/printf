@@ -84,10 +84,10 @@ int _unsigned(unsigned int n)
 
 /**
 * print_binary - print numbers to binary
-* @arg: arguments to print.
+* @num: arguments to print.
 * Return: number of prirnts
 */
-int print_binary(unsigned num)
+int print_binary(unsigned int num)
 {
 	char *str;
 	unsigned int i, auxi = 0, cont;
